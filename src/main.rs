@@ -17,14 +17,15 @@ fn solve() {
     let mut counter = 1;
 
     while constraint_vector.len() > 0 {
-        // Initiate the vector that contains the indices of the connstraints that are fulfilled this run and therefor need to be removed
+        // Initiate the vector that contains the indices of the constraints that are fulfilled this run and therefor need to be removed
         let mut removal_vec: Vec<usize> = Vec::new();
 
         for index in 0..constraint_vector.len() {
             let constraint = constraint_vector[index];
-            if let Constraint::DirectConstraint(value) = constraint {
-                let constraint_fulfilled = check_direct_constraint(&mut houses, value);
 
+            if let Constraint::DirectConstraint(value) = constraint {
+
+                let constraint_fulfilled = check_direct_constraint(&mut houses, value);
                 if constraint_fulfilled {
                     // If this constraint was fully fulfilled, it can be removed from the list as it doesn't need to be checked anymore
                     println!(
@@ -35,6 +36,7 @@ fn solve() {
                 }
             }
             if let Constraint::LocationConstraint(value) = constraint {
+
                 let constraint_fulfilled = check_location_constraint(&mut houses, value);
                 if constraint_fulfilled {
                     // If this constraint was fully fulfilled, it can be removed from the list as it doesn't need to be checked anymore
