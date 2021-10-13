@@ -9,7 +9,7 @@ fn main() {
 }
 
 fn solve() {
-    print!("Moin");
+    println!("Moin\n");
     // Initiate and fill the constraint and house vectors
     let mut constraint_vector: Vec<Constraint> = fill_vectors();
     let mut houses: Vec<House> = init_houses();
