@@ -41,7 +41,7 @@ fn solve() {
                 if constraint_fulfilled {
                     // If this constraint was fully fulfilled, it can be removed from the list as it doesn't need to be checked anymore
                     println!(
-                        "Direct Constraint {:?} | {:?} is fulfilled in round {}",
+                        "Location Constraint {:?} | {:?} is fulfilled in round {}",
                         value.trait_1, value.trait_2, counter
                     );
                     removal_vec.push(index);
